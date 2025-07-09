@@ -18,7 +18,7 @@ std::ifstream openFile(const std::string& fileName) {
     return file; // returns the file obj 
 }
 
-std::ofstream closeFile(std::ifstream file) {
+std::ofstream closeFile(std::ifstream& file) {
     if (file.is_open()) {
         file.close();
     }
