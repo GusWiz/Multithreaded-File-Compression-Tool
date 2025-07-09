@@ -5,3 +5,4 @@
 
 std::ifstream openFile(const std::string& fileName);
 void closeFile(const std::ifstream& file);
+std::streamsize getFileSize(const std::ifstream& file);

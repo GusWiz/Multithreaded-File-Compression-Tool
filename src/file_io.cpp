@@ -18,9 +18,17 @@ std::ifstream openFile(const std::string& fileName) {
     return file; // returns the file obj 
 }
 
-std::ofstream closeFile(std::ifstream& file) {
+void closeFile(std::ifstream& file) {
     if (file.is_open()) {
         file.close();
     }
+}
+
+std::streamsize getFileSize(std::ifstream& file) {
+    const auto currentPos = file.tellg();
+    file.seekg(0, std::ios::end);
+    std::streamsize size = file.tellg();
+    file.seekg(currentPos);
+    return size;
 }
 
