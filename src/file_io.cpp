@@ -37,3 +37,7 @@ bool fileExists(const std::string& filename) {
     return std::filesystem::exists(filename);
 }
 
+std::filesystem::path stringToPath(const std::string& filename) {
+    std::filesystem::path filePath = filename;
+    return filePath;
+}

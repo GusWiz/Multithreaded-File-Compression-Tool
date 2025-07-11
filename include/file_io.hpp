@@ -7,9 +7,10 @@
 #include <filesystem>
 
 std::ifstream openFile(const std::string& fileName);
-void closeFile(const std::ifstream& file);
-std::streamsize getFileSize(const std::ifstream& file);
+void closeFile(std::ifstream& file);
+std::streamsize getFileSize(std::ifstream& file);
 bool fileExists(const std::string& filename);
+std::filesystem::path stringToPath(const std::string& filename);
 // create a function that stops multi-threading issues, like
 // race condition
 // Approach to this function will be chunking the given file
