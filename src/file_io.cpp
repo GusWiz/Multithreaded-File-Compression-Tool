@@ -1,3 +1,4 @@
+#include "file_io.hpp"
 #include <fstream> // librarry for Reading/writing files
 #include <iterator> 
 #include <algorithm>
@@ -30,5 +31,9 @@ std::streamsize getFileSize(std::ifstream& file) {
     std::streamsize size = file.tellg();
     file.seekg(currentPos);
     return size;
+}
+
+bool fileExists(const std::string& filename) {
+    return std::filesystem::exists(filename);
 }
 
