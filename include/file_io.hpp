@@ -12,8 +12,8 @@
 namespace file_io {
     
     struct Chunk { 
-        std::streampos start;
-        std::streamsize size;
+        std::streampos start; // keeps track of the position within a stream
+        std::streamsize size; // tracks the number of characters that have been read, written, or other input/output processes
     };
 
 
@@ -41,4 +41,5 @@ std::ofstream openOutputFile(const std::string& filepath);
 // Approach to this function will be chunking the given file
 // Allowing us to track have our threads deal with its own given chunks
 // while keeping progress (estimate progress (percentage), track completeness)
+
 }
