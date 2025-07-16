@@ -12,11 +12,11 @@ int main() {
     std::string filename;
     std::cin >> filename;
     std::string userDir = currentDirPathString + '/' + filename;
-    if (fileExists(userDir)) {
+    if (file_io::openInputFile(userDir)) {
         try {
-            std::ifstream currFile = openFile(filename);
+            std::ifstream currFile = file_io::openInputFile(filename);
             std::cout << "File Exist: True" << std::endl;
-            std::cout << "File Size: " << getFileSize(currFile) << std::endl; 
+            std::cout << "File Size: " << file_io::getFileSize(currFile) << std::endl; 
         } catch (const std::system_error& e) {
             std::cout << "Error on retrieving file information." << e.what() << std::endl;
         }
@@ -24,4 +24,4 @@ int main() {
         std::cout << "File does not exist" << std::endl;
     }
     return 0; 
-}
+}   

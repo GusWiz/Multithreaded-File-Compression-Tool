@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <string>
 
-
+namespace file_io {
 /*
 file_io.hpp
 - Declares functions for reading from and writing to files in binary mode.
@@ -47,4 +47,7 @@ std::ofstream openOutputFile(const std::string& filepath) {
     if (!file.is_open()) {
         throw std::runtime_error("Could not open file for writing.");
     }
+    return file;
+}
+
 }
