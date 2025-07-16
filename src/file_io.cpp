@@ -11,10 +11,10 @@ file_io.hpp
 - Supports chunking files for parallel processing.
  */
 
-std::ifstream openFile(const std::string& fileName) {
-    std::ifstream file(fileName);
+std::ifstream openInputFile(const std::string& filepath) {
+    std::ifstream file(filepath);
     if (!file.is_open()) {
-        throw std::runtime_error("Could not open file.");
+        throw std::runtime_error("Could not open file for reading.");
     }
     return file; // returns the file obj 
 }
@@ -37,7 +37,14 @@ bool fileExists(const std::string& filename) {
     return std::filesystem::exists(filename);
 }
 
-std::filesystem::path stringToPath(const std::string& filename) {
-    std::filesystem::path filePath = filename;
-    return filePath;
+std::filesystem::path stringToPath(const std::string& filepath) {
+    std::filesystem::path path = filepath;
+    return path;
+}
+
+std::ofstream openOutputFile(const std::string& filepath) {
+    std::ofstream file(filepath);
+    if (!file.is_open()) {
+        throw std::runtime_error("Could not open file for writing.");
+    }
 }
