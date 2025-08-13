@@ -50,4 +50,8 @@ std::ofstream openOutputFile(const std::string& filepath) {
     return file;
 }
 
+std::streamsize getFileSize(std::ifstream file) {
+    
+}
+
 }
