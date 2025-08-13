@@ -1,5 +1,9 @@
+#ifndef File_Manager_H
+#define File_Manager_H
+
 #include <filesystem>
 #include <vector>
+
 class FileManager { 
 private:
     std::filesystem::path filePath;
@@ -29,3 +33,5 @@ public:
     // Iterates over directory and returns a list of file paths.
     static std::vector<std::filesystem::path> listFilesInDirectory(const std::string &dirPath);
 };
+
+#endif
