@@ -3,6 +3,7 @@
 
 #include <filesystem>
 #include <vector>
+#include <fstream>
 
 class FileManager { 
 private:
