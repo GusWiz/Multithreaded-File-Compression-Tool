@@ -28,7 +28,5 @@ CompressionJob
 
 # How to Compile and Run the program: 
 Compile by pasting this in your terminal:
-gcc -o testing_file_io.exe src/testing_file_io.cpp src/file_io.cpp -I include -lstdc++
 
 Run:
-.\testing_file_io.exe
