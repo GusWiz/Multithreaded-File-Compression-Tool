@@ -7,9 +7,10 @@
 #include <filesystem>
 #include <optional>
 #include <cstddef>
+#include <vector>
 
 // Using namespace for safety, platform compatibility, and convenience
-namespace file_io {
+namespace file_io { // this line replaces the need to do std::filesystem::path
     
     struct Chunk { 
         std::streampos start; // keeps track of the position within a stream
@@ -35,6 +36,7 @@ std::filesystem::path stringToPath(const std::string& filepath);
 // open a ofstream oject for writing purposes
 std::ofstream openOutputFile(const std::string& filepath);
 
+std::streamsize getFileSize(std::ifstream& file);
 //Notes: 
 // create a function that stops multi-threading issues, like
 // race condition
