@@ -76,9 +76,23 @@ std::vector<char> FileManager::readChunk(std::size_t offset, std::size_t size) c
 }
 
 bool FileManager::writeFile(const std::string &outputPath, const std::vector<char> &data) const{
-
+    std::ofstream out(outputPath, std::ios::binary);
+    if (!out) {
+        return false;
+    }
+    out.write(data.data(), static_cast<std::streamsize>(data.size()));
+    return true;
 }
 
 static std::vector<std::filesystem::path> listFilesInDirectory(const std::string &dirPath) {
-    
+    std::vector<std::filesystem::path> files;
+    std::filesystem::path directory(dirPath);
+
+    if (std::filesystem::exists(directory) && std::filesystem::is_directory(directory)) {
+        for (const auto &entry : std::filesystem::directory_iterator(directory)) {
+            if (std::filesystem::is_regular_file(directory)) {
+                files.push_back(entry.path());
+            }
+        }
+    }
 }
