@@ -15,3 +15,5 @@ public:
     // Optional: return the algorithm name (useful for metadata)
     virtual std::string getName() const = 0;
 };
+
+#endif
