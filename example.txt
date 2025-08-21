@@ -1,0 +1,5 @@
+This file is used to test the compressor Run-Length Encoding algorithm for testing purposes.
+
+
+
+RRRRRRR llllllll eeeeee 1111 2 44444 55 eee
