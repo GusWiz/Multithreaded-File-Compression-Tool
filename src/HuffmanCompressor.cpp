@@ -1,4 +1,4 @@
-#include "HuffmanCompressor.h";
+#include "HuffmanCompressor.h"
 // defines integer types with specific widths. Which allows for precise control over int size
 // Helpful for file compression
 #include <cstdint> 

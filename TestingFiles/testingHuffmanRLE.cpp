@@ -1,5 +1,5 @@
-#include "HuffmanCompressor.h";
-#include "FileManager.h";
+#include "HuffmanCompressor.h"
+#include "FileManager.h"
 #include <iostream>
 
 int main() {

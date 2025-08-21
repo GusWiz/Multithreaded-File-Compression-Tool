@@ -1,7 +1,7 @@
 #ifndef HUFFMANCOMPRESSOR_H
 #define HUFFMANCOMPRESSOR_H
 
-#include "Compressor.h";
+#include "Compressor.h"
 
 class HuffmanCompressor : public Compressor { 
 public:

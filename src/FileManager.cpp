@@ -1,4 +1,4 @@
-#include "FileManager.h";
+#include "FileManager.h"
 
 FileManager::FileManager(const std::string &filename) {
     setFile(filename);
