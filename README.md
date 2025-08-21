@@ -27,6 +27,7 @@ CompressionJob
  ├─ execute()
 
 # How to Compile and Run the program: 
-Compile by pasting this in your terminal:
-
+Compile by pasting this in your powershell terminal:
+    g++ -o testingHuffmanRLE.exe -o .\TestingFiles\testingHuffmanRLE.cpp .\src\FileManager.cpp .\src\HuffmanCompressor.cpp -I include -std=c++17
 Run:
+    .\testingHuffmanRLE.exe
