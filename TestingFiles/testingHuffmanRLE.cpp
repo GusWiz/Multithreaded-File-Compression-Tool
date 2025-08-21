@@ -1,5 +1,5 @@
-#include "HuffmanCompressor.h"
-#include "FileManager.h"
+#include "HuffmanCompressor.h";
+#include "FileManager.h";
 #include <iostream>
 
 int main() {
@@ -24,6 +24,6 @@ int main() {
     std::cout << "Algorithm used: " << compressor.getName() << std::endl;
     std::cout << "Original size: " << chunk.size() << std::endl;
     std::cout << "Compressed size: " << compressed.size() << std::endl;
-    
+
     return 0;
 }
